@@ -1,6 +1,5 @@
 import React, { useContext} from "react";
 import Map from "./Map";
-import "../App.css";
 import Loader from "./Loader";
 import { NewsContext } from "../Context/NewsContext";
 

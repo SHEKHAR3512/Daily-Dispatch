@@ -5,6 +5,8 @@ import { NewsContext } from "../Context/NewsContext";
 export default function Map() {
 
   const {news}=useContext(NewsContext)
+  console.log("shekhar",news);
+  
   return (
     <>
       {news.map((el, indx) => {

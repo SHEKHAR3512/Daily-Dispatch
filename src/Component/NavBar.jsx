@@ -13,30 +13,43 @@ export default function NavBar() {
         </Link>
         <a className="navbar-brand" href="home" style={{fontFamily: 'Amoretta',fontSize:"30px"}}>Daily Dispatch</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"/>
-      <span class="navbar-toggler-icon"></span>
+      <span className="navbar-toggler-icon"></span>
         <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-          <li><Link to={'home'} className="nav-link px-2 text-white">Home</Link></li>
-          <li><Link to={'about'} className="nav-link px-2 text-white">About</Link></li>
-          <li><Link to={'contact'} className="nav-link px-2 text-white">Contact</Link></li>
-          <li><Link to={''} className="nav-link px-2 text-white"onClick={()=>{setcategory('business')}}>Business</Link></li>
-          <li> <Link to={''} className="nav-link px-2 text-white" onClick={()=>{setcategory('entertainment')}}>Entertainment</Link></li>
-          <li><Link to={''} className="nav-link px-2 text-white" onClick={()=>{setcategory('health')}}>Health</Link></li>
-          <li><Link to={""} className="nav-link px-2 text-white" onClick={()=>{setcategory('sports')}}>Sports</Link></li>
-          <li><Link to={""} className="nav-link px-2 text-white" onClick={()=>{setcategory('technology')}}>Technology</Link></li>
-          <li><Link to={""} className="nav-link px-2 text-white" onClick={()=>{setcategory('science')}}>Science</Link></li>
-  
+          <li><Link to={'home'} className="nav-link px-2 text-white link-hover">Home</Link></li>
+          <li><Link to={'about'} className="nav-link px-2 text-white link-hover">About</Link></li>
+          <li><Link to={'contact'} className="nav-link px-2 text-white link-hover">Contact</Link></li>
+          <li><Link to={''} className="nav-link px-2 text-white link-hover" onClick={()=>{setcategory('business')}}>Business</Link></li>
+          <li><Link to={''} className="nav-link px-2 text-white link-hover" onClick={()=>{setcategory('entertainment')}}>Entertainment</Link></li>
+          <li><Link to={''} className="nav-link px-2 text-white link-hover" onClick={()=>{setcategory('health')}}>Health</Link></li>
+          <li><Link to={''} className="nav-link px-2 text-white link-hover" onClick={()=>{setcategory('sports')}}>Sports</Link></li>
+          <li><Link to={''} className="nav-link px-2 text-white link-hover" onClick={()=>{setcategory('technology')}}>Technology</Link></li>
+          <li><Link to={''} className="nav-link px-2 text-white link-hover" onClick={()=>{setcategory('science')}}>Science</Link></li>
         </ul>
-
-        <form className="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-          <input type="search" className="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search"/>
-        </form>
-
-        <div className="text-end">
-          <button type="button" className="btn btn-outline-light me-2">Login</button>
-          <button type="button" className="btn btn-warning">Sign-up</button>
-        </div>
       </div>
     </div>
+    <style>{`
+      .link-hover {
+        transition: all 0.3s ease-in-out;
+        position: relative;
+      }
+      .link-hover::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -3px;
+        width: 0;
+        height: 2px;
+        background-color: yellow;
+        transition: all 0.3s ease-in-out;
+        transform: translateX(-50%);
+      }
+      .link-hover:hover {
+        color: yellow !important;
+      }
+      .link-hover:hover::after {
+        width: 100%;
+      }
+    `}</style>
   </header>
   )
 }

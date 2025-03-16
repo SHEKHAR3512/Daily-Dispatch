@@ -6,30 +6,40 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
+    "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix"
   },
   "dependencies": {
     "@coreui/coreui": "^5.2.0",
     "@coreui/react": "^5.4.1",
     "@reduxjs/toolkit": "^2.5.0",
     "bootstrap": "^5.3.3",
+    "prop-types": "^15.8.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.0.1",
-    "swr": "^2.2.5"
+    "swr": "^2.2.5",
+    "tailwind": "^4.0.0",
+    "tailwindcss": "^4.0.14"
   },
   "devDependencies": {
     "@eslint/js": "^9.20.0",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "@typescript-eslint/eslint-plugin": "^8.24.0",
+    "@typescript-eslint/parser": "^8.24.0",
     "@vitejs/plugin-react": "^4.3.4",
     "eslint": "^9.20.1",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-react": "^7.37.4",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.14",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "globals": "^15.15.0",
+    "prettier": "^3.5.0",
     "vite": "^6.0.1"
   }
 }

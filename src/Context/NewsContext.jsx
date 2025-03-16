@@ -1,6 +1,9 @@
+import React from "react";
 import { createContext, useState,useEffect } from "react";
+import PropTypes from "prop-types";
 
 export const NewsContext=createContext()
+
  export  default function ContextProvider(props){
   const [news, setNews] = useState([])
   const [category,setcategory]=useState('general')
@@ -37,3 +40,7 @@ export const NewsContext=createContext()
 </NewsContext.Provider>
   )
 }
+
+ContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
