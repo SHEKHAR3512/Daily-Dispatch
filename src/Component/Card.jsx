@@ -4,22 +4,28 @@ import news from '../Images/news.png';
 
 export default function Card({ data, img, description }) {
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3 p-2">
-      <div className="w-full max-w-xs bg-white rounded-lg shadow-md overflow-hidden transform transition duration-300 hover:translate-y-[-3px] hover:shadow-xl m-2 card">
-        <img src={img ? img : news} alt={data.title} className="w-full h-24 object-cover" />
-        <div className="p-3">
-          <h5 className="text-sm font-bold text-gray-900 text-center card-title">{data.title.slice(0, 30)}</h5>
-          <p className="text-gray-700 mt-1 text-xs card-content">{description ? description.slice(0, 70) : "Update"}</p>
-          <div className=" bg-white mt-3 text-right card-footer">
-            <a
-              href={data.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-3 py-1 bg-blue-600 text-white text-xs font-medium rounded-md shadow-md transition-all duration-300 hover:bg-blue-700 card-button"
-            >
-              Read Full Article
-            </a>
-          </div>
+    <div className="bg-gray-50 rounded-xl shadow-lg overflow-hidden transition-all duration-500 ease-in-out transform hover:-translate-y-2 hover:shadow-2xl animate-fadeIn">
+      <img
+        src={img ? img : news}
+        alt={data.title}
+        className="w-full h-40 object-cover transition-transform duration-300 hover:scale-105"
+      />
+      <div className="p-5">
+        <h5 className="text-lg font-semibold text-gray-800 text-center">
+          {data.title.slice(0, 40)}
+        </h5>
+        <p className="text-gray-600 mt-3 text-base">
+          {description ? description.slice(0, 90) : "Update"}
+        </p>
+        <div className="mt-4 text-right">
+          <a
+            href={data.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block px-5 py-2 bg-blue-600  text-sm font-medium rounded-lg shadow-md transition-colors duration-300 hover:bg-blue-700"
+          >
+            Read Full Article
+          </a>
         </div>
       </div>
     </div>
